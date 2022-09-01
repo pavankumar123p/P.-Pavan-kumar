@@ -5,12 +5,12 @@
 
 int main(){
     int a;
-    char b;
+    char b;     // declare the farmatted data types
     float c;
     long int d; 
-    printf("Enter the value four format inputs\n:");
+    printf("Enter the value four format inputs\n:");   // Read the vales from user to formated integer inputs
     scanf("%d %c %f %ld",&a,&b,&c,&d);
-    printf("After entered the four format inputs:\n");
+    printf("After entered the four format inputs:\n");  // 
     printf("%d %c %f %ld",a,b,c,d);
 
     return 0;
