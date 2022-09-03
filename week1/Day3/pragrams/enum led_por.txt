@@ -1,0 +1,42 @@
+enum led_port:
+
+Algoritm:
+1.start
+2.define the crystyell oscillator with 20Mhz freqency
+3.define the enum with numbers
+4.enable the microcontroller port c for output
+5.get output from port c and connect to blow the LED.
+6.apply the delay timer at if condition
+7.apply the delay timer at else if condition
+
+
+
+#include <xc.h>
+#define __XTAL_FREQ 20000000 //define the crystyell oscillator with 20Mhz freqency
+
+enum led_port{first=0x00,second=0x01,third=0x02,fourth=0x03};  //define the enum with numbers
+
+void main(){
+    TRISB=0X03;  //set set port B as a input 
+    INTCON2bits.RBPU=0;
+    TRISC=0X00; // makes the port  as a output
+    PORTC=0X00; //set as a port c status
+    while(1){
+        if(PORTBbits.RB0 ==0){ //apply the delay timer at if condition
+            PORTC=first;
+            for(unsigned long int i=0;i<150000;i++);
+            PORTC=second;
+            for(unsigned long int i=0;i<150000;i++);
+            
+        }
+        else if(PORTBbits.RB0 ==0){  //apply the delay timer at else if condition
+            PORTC=third;
+            for(unsigned long int i=0;i<150000;i++);
+            PORTC=fourth;
+            for(unsigned long int i=0;i<150000;i++);
+        }
+        else
+            PORTC =first;
+    }
+    
+}

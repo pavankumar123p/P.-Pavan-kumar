@@ -1,0 +1,23 @@
+WAP for differnt datatypes and print the values:
+
+Alogoritm:
+1.start.
+2.declares the different data types as global variable.
+3.In main(), initialise the values to variables. 
+4.print the values as a result.  
+
+#include <stdio.h>
+int integer_val;  //Initialise the
+char char_val;
+float float_val;
+long int long_val;
+//bool bool_val;
+int main() {
+    integer_val=100;
+    char_val='h';
+    float_val=0.4;
+//  bool_val=1;
+    printf("integer value is:%d",integer_val);
+
+    return 0;
+}

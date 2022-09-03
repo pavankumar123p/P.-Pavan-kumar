@@ -1,0 +1,17 @@
+giving input to microcontroller to blow LED:
+
+Algorithm:
+1.start
+2.define the crystell oscillator with 20MHZ frequency
+3.enable the microcontroller port c for output
+4.get output from port c and connect to blow the LED.
+
+#include <xc.h>00
+#define __XTAL_FREQ 20000000  //define crystell oscillator with 20Mhz frequency
+int main(void){
+    TRISC=0X00;  //set as port c as output
+    LATCbits.LATC0=0; //enables the status of pin c
+    while(1){
+        LATCbits.LATC0=1;  //get output of port c
+    }
+}

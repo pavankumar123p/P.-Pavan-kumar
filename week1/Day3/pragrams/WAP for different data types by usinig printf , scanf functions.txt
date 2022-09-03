@@ -1,0 +1,36 @@
+printf and scanf functions:
+
+Algorithm:
+1.start.
+2.Declares the  variables with out values.
+3. Read the values from user as individualy like, int ,char, float, double.
+4.print the data types individually .
+
+#include <stdio.h>
+
+int main(){
+    int a;
+    char b;        // declares the data types
+    float c;
+    long int d;
+    printf("enter the integer number:\n"); //Read the integer value from user
+    scanf("%d", &a);                         //write the data from user
+
+    printf("enter the charecter value:\n");  //Read the integer value from user
+    scanf(" %c", &b);                             //write the data from user
+
+    printf("enter the float value:\n");    //Read the integer value from user
+    scanf("%f",&c);                           //write the data from user
+
+    printf("enter the double number:\n");   //Read the integer value from user
+    scanf("%ld",&d);                             //write the data from user
+
+    printf("After the entered numbers \n");  //after enter the variables
+
+    printf("the integer value is:%d \n",a);   //print the integer value
+    printf(" the charecter value is:%c \n",b); //print the charecter value
+    printf("the float value is:%f \n",c);    //print the float value
+    printf("the long value is:%ld \n",d);   //print the long int value
+
+    return 0;
+}

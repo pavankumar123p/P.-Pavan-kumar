@@ -1,0 +1,29 @@
+WAP for different datatypes:
+
+Algorithm:
+1.start.
+2.declares the variables as a global variables. 
+3.In main(), initialise the values to variables. 
+4.print the values as a result.  
+
+
+#include <stdio.h>
+int integer_val;
+char char_val;  //Declares the variables as a globle variables
+float float_val;
+long int long_val;
+///bool bool_val;
+int main() {
+    integer_val=100;
+    char_val='h'; // assigning the values to the variables
+    float_val=0.4;
+    //bool_val=1;
+    printf("/n Integer value is:%d",integer_val);  //print the different data types values
+    printf("/n Enter the Integer value is:");
+    scanf("%d",&integer_val);
+    printf("integer value is:%d",integer_val);
+    integer_val=200;      //declare and initialise the anither variable
+    
+    printf("\ninteger value is:%d",integer_val);
+    return 0;
+}
