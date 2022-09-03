@@ -1,0 +1,9 @@
+3. conditional statement:
+
+
+#include <stdio.h>
+ int main(){
+     int n1=46,n2=100,d1,d2,rev;     // initializes the values
+     (n1<n2)?puts("true"):puts("False");  // By using terenery operator apply the condition
+     return 0;
+ }  

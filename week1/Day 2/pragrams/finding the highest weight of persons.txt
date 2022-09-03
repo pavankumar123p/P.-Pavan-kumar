@@ -1,0 +1,18 @@
+Alogoritm:
+
+1.start.
+2.declares the variables.
+3.Initialises the variables.
+4.use the terenory operator get the output.
+
+#include <stdio.h>
+
+int main(){
+  int x,y,z; //declares the variables
+  x=12;
+  y=29;   //Initialises the variable
+  z=85;
+  (x>y)?printf("x is big"):printf("y is big"); //use terenory operator get output
+  (y>z)?printf("y is big"):printf("z is big"); //use terenory operator get output
+
+}

@@ -1,0 +1,11 @@
+2. Circle program:
+
+
+#include <stdio.h> 
+int main(){
+    int r=4,a; //initiliase the variables
+
+    a=22/7*r*r;  //By circle formula pi r^3
+    printf("%d",a); // print the result
+    return 0;
+}

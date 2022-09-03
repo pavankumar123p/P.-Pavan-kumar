@@ -1,0 +1,15 @@
+
+AlGorithm:
+1.declare and initialises the varable
+2.use the terenary operator to print the even or odd number at different 5 values
+
+#include <stdio.h>
+
+int main(){
+ int A1=1,A2=2,A3=3,A4=4,A5=5; // declare and initialises the varable
+ (A1%2==0)?puts("even"):puts("odd");
+ (A2%2==0)?puts("even"):puts("odd"); //use the terenary operator to print the even or odd number at different 5 values
+ (A3%2==0)?puts("even"):puts("odd");
+ (A4%2==0)?puts("even"):puts("odd");
+ (A5%2==0)?puts("even"):puts("odd");
+}

@@ -1,0 +1,49 @@
+Algorithm:
+
+1.start.
+2.declare the variables and get variable values by user.
+3.write the variable values.
+4.Ectract the number one by one and print them in reverse order.
+
+
+program:
+
+#include <stdio.h>
+int main(){
+    int n,t;         // declares the variables
+
+    printf("Enter a number"); //Read the value 6 from user
+    scanf("%d",&n);            //write the values 6 from user
+
+    printf("%d \nReverse number:",n);  //enter the 6 numbers by user
+
+    t=n%10;             //here Extracting the every number one by one 
+    printf("%d",t);    //print the reversed number
+
+    n=n/10;
+    t=n%10;        //here Extracting the every number one by one
+    printf("%d",t);   //print the reversed number
+
+
+    n=n/10;
+    t=n%10;          //here Extracting the every number one by one
+    printf("%d",t);    //print the reversed number
+
+
+    n=n/10;
+    t=n%10;       //here Extracting the every number one by one
+    printf("%d",t);     //print the reversed number
+
+
+    n=n/10;
+    t=n%10;      //here Extracting the every number one by one
+    printf("%d",t);    //print the reversed number
+
+
+    n=n/10;
+    t=n%10;      //here Extracting the every number one by one
+    printf("%d",t); //print the reversed number
+
+    n=n/10;
+    t=n%10;
+}

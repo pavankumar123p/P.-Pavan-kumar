@@ -1,0 +1,16 @@
+logical operators program:
+
+Algorithm:
+1.start.
+2.declares and initilises the variables.
+3.By Terenery operator along with that perform AND,OR,NOT operations.
+4.print the results of AND, OR, NOT operations.
+
+#include <stdio.h>
+ int main(){
+     int n1=46,n2=100,n3=25,d1,d2,rev; //intialises the variables 
+     (n1<n2)&&(n3<n2)?puts("true"):puts("False"); // use terenery operator along with AND operator
+     (n1<n2)||(n3<n2)?puts("true"):puts("False");  // use terenery operator along with AND operator
+     !(n1<n2)&&(n3<n2)?puts("true"):puts("False");  // use terenery operator along with AND operator
+     return 0;
+ }
