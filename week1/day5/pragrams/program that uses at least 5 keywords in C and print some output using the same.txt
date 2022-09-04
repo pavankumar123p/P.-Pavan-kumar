@@ -1,0 +1,27 @@
+3.Write a program that uses at least 5 keywords in C and print some output using the same. 
+------------------------------------------------------------------------------------------
+Algorithm:
+1.start
+2.Declare the student details as a data base
+3.Read and writethe data from use as a student details.
+4. print the student database.
+
+#include <stdio.h>
+
+int main()
+{
+    char student_name;  //declares the student name as a variable
+    int student_id;    //declares the student id as a variable
+    float student_marks;  //declares the student marks as a variable
+    
+    printf("enter the student_name:"); //Enter the student name
+    scanf("%c",&student_name);        //Read the student name
+    printf("enter the student_id:");    //Enter the student name
+    scanf("%d",&student_id);            //Read the student name
+    printf("enter the student_marks:"); //Enter the student name
+    scanf("%f",&student_marks);          //Read the student name
+
+    printf("the student details is:%c %d %f",student_name,student_id,student_marks); //print the student details
+    
+    return 0;
+}

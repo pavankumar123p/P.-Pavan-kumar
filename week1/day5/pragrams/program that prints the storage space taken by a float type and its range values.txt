@@ -1,0 +1,18 @@
+Write a program that prints the storage space taken by a float type and its range values. 
+-------------------------------------------------------------------------------------------
+
+Algoritm:
+1.start
+2. take float is float data type
+3.print the float size by functions
+
+#include <stdio.h>
+
+int main()
+{
+    float floatvalue;  //declare the float datatype
+    printf("storage space taken by floatvalue=%zu",sizeof(floatvalue)); // print the size of float value
+    
+
+    return 0;
+}

@@ -1,0 +1,34 @@
+1. Write a program to input data from user using scanf() and display various format specifiers using printf(). 
+-------------------------------------------------------------------------------------------------------------
+
+Algorithm:
+1.start
+2.declares the different datatypes 
+3.Read the data from user write the data
+4. After read and write , print the data of all differenet dta types
+
+
+#include <stdio.h>
+int main(){           //declares the different datatypes
+    int a;
+    char b;
+    float c;
+    long int d;
+    printf("enter the integer number:\n");   //read the integer data from user
+    scanf("%d", &a);
+    printf("enter the charecter value:\n");   //read the charecter data from user
+    scanf(" %c", &b);
+    printf("enter the float value:\n");       //read the float data from user
+    scanf("%f",&c);
+    printf("enter the double number:\n");  //read the double data from user
+    scanf("%ld",&d);
+
+    printf("After the entered numbers \n"); 
+    printf("the integer value is:%d \n",a);   //print the all data types
+    printf(" the charecter value is:%c \n",b);
+    printf("the float value is:%f \n",c);
+    printf("the long value is:%ld \n",d);
+
+    return 0;
+}
+

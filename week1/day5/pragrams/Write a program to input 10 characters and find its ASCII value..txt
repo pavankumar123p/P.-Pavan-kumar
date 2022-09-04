@@ -1,0 +1,24 @@
+Write a program to input 10 characters and find its ASCII value. 
+------------------------------------------------------------------
+Algoritm:
+1.strt
+2.declare the 10 char variables along with name of charecter
+3.convert the charecter value
+4.print the charecter to ascii values.
+
+
+#include<stdio.h>
+int main(){
+    char a = 'p';   //assing the charecter values to the variable
+    char b = 'a';   //assing the charecter values to the variable
+    char c = 'v';    //assing the charecter values to the variable
+    char d = 'a';   //assing the charecter values to the variable
+    char e = 'n';    //assing the charecter values to the variable
+    char f = 'k';    //assing the charecter values to the variable
+    char g = 'u';   //assing the charecter values to the variable
+    char h = 'm';   //assing the charecter values to the variable
+    char i = 'a';   //assing the charecter values to the variable
+    char j = 'r';   //assing the charecter values to the variable
+    
+    printf("ascii value of a = %d\nb = %d\nc = %d \nd = %d \ne = %d \nf = %d \ng = %d \nh = %d \ni = %d \nj = %d \n",a,b,c,d,e,f,g,h,i,j);   //print the Acsii value
+}
