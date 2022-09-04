@@ -1,0 +1,33 @@
+microcontroller program:
+-----------------------------------------
+Microcontroller-pic18f458:
+
+Algoritm:
+1.start
+2.define the crystell oscillator with 20MHz feaquency
+3.let us define the enum number with led port number as global variable
+4.set the port b as output mode and status shuld be 0.
+5.print the values according to the given time period of delay.
+
+#include <xc.h>
+#define __XTAL_FREQ 20000000        //define the crystell oscillator with 20MHz freaquenc 
+
+enum led_port{first=0x00,second=0x01,third=0x02,fourth=0x03};        //define the enum number with led-port 
+ 
+int main(void){
+    TRISB=0x00;  //set the bit port B is output
+    PORTB=0x00;  // set the status of the port b is zero
+
+    while(1){
+        PORTB=first;                             //get the output as per given time period 150000
+        for(unsigned long int i=0;i<150000;i++);
+        PORTB=second;                            //get the output as per given time period 150000
+        for(unsigned long int i=0;i<150000;i++);
+        PORTB=third;                            //get the output as per given time period 150000
+        for(unsigned long int i=0;i<150000;i++);
+        PORTB=fourth;                           //get the output as per given time period 150000
+        for(unsigned long int i=0;i<150000;i++);
+        
+    }
+}
+

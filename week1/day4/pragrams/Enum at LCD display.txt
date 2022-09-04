@@ -1,0 +1,22 @@
+Enum at LCD display:
+--------------------
+Algorithm:
+1.start
+2.define the enum numbers with variables as clear, display, first, second
+3.Read the values from user
+4.print the enum vlaues 
+#include <stdio.h>
+
+int main()
+{
+    enum lcd{clear=0x01, display=0x08,first=0x80,second=0xc0}; //declare the enum numbers with vaiables
+    printf("\n0x%x",clear);
+    printf("\n0x%x",display);  //read the enum values
+    printf("\n0x%x",first);
+    printf("\n writting in first line");
+    printf("\n0x%x",second);
+    printf("\n writting in second line");// print the enu values
+    printf("\n0x%x",clear);
+
+    return 0;
+}

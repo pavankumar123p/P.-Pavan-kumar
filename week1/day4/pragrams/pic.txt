@@ -1,0 +1,34 @@
+
+2.Receiving data:
+-----------------
+
+
+#include <xc.h>
+#define __XTAL_PREQ 20000000  //define crystel oscillator with 20HGZ freaquency
+int main()
+{
+    TRISBbits.RB0 =0;  //set as the port RB0 as ouput
+    PORTBbits.RB0 =0;  //set the port RB0 as status
+    TRISBbits.RB1 =0;  //set as the port RB1 as ouput
+    PORTBbits.RB1 =0;   //set the port RB1 as status
+    TRISCbits.RC6 =0;  //set as the port RC6 as ouput
+    TRISCbits.RC7 =1;  //set the port RC7 as status
+
+    SPBRG = 32;   //set the buad rate
+    TXSTA =0X20;  //transfer the data
+    RCSTA =0X90;   //receive the data
+    while(RCIF==0);
+    //PORTBbits.RBI =1;
+    if(RCSTAbits.OERR)
+    {
+       CREN = 0;
+        NOP();
+        CREN = 1;
+    }
+    char val = RCREG;  // declare the variable
+    if(val == 'a')      //check the condition
+        PORTBbits.RB0 = 1;
+    else
+        PORTBbits.RB0 =0;
+    return 0;
+}

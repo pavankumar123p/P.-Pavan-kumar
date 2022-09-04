@@ -1,0 +1,38 @@
+student database using structures and unions:
+
+Algoritm:
+1. start
+2. declares the union student variables as globel variables
+3. In main, declares the function call of union , structures
+4. declares the function call of union , structures, unions with different values.
+5. print the structures student database values
+6. print the unions student database values
+7.stop
+
+union student_u1{  //declare the union of student variables as gloabal variables
+    int id_u1;
+    char name_u1;
+    int std_u1;
+};
+    int main(){
+        struct student_s1 stu_s1;  //declares the function call of structures
+        union student_u1 stu_u1;   //declares the function call of union
+        
+        stu_s1.id_s1=12;         //declares the function call of structures
+        stu_s1.name_s1='p';  
+        stu_s1.std_s1=fifth;
+        
+        stu_u1.id_u1=23;
+        stu_u1.name_u1='k';     //declares the function call of union 
+        stu_u1.std_u1=fourth;
+        
+        printf(".......structure output.....");
+        printf("\nstudent id=%d",stu_s1.id_s1);   //print the structures student database values
+        printf("\nstudent name=%c",stu_s1.name_s1);
+        printf("\nstudent std=%d",stu_s1.std_s1);
+        
+        printf("\n........union output......");
+        printf("\nstudent id=%d",stu_u1.id_u1);
+        printf("\nstudent name=%c",stu_u1.name_u1);//print the unions student database values
+        printf("\nstudent std=%d",stu_u1.std_u1);
+    }
