@@ -1,0 +1,26 @@
+01-09-22-two dimentional arry:
+
+Algorithm:
+1.
+
+
+#include <stdio.h>
+
+int main(){
+    int a[2][3],i,j,m,n;
+    printf("Enter the rows and colomns:");
+    scanf("%d %d",&m,&n);
+    printf("enetr the elements: ");
+    for(int i=0;i<m;i++){
+        for(int j=0;j<n;j++){
+            scanf("%d", &a[i][j]);
+        }
+    }
+    printf("array elements are:\n ");
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+}

@@ -1,0 +1,30 @@
+30-08-22- prime number using while loop:
+Algorithm:
+1.start
+2.declare and initialise the varibles
+3.Enter the number and Read the value
+4.Check the condition prime number
+5.the condition is true ,it prints the if condition as a prime number
+6.if condion fails,it print the else part not the prime number
+
+#include<stdio.h>
+int main(){
+    int i=1,n,count=0;    //declare and initialise the variables
+
+    printf("Enter the number:\n"); //Enter the number and read it
+    scanf("%d",&n);
+    while(i<=n){  //check the condition
+        if(n%i==0){
+            
+            count++; //increment the count
+        }
+        i++;  //increment the value
+    }
+    if(count==2){//check the condition 
+        printf("the number is prime\n");//print the prime number
+    }
+    else{
+        printf("the number is not prime\n");//print the number is nit prime
+    }
+   return 0;
+}

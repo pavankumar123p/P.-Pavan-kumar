@@ -1,0 +1,25 @@
+1. WAP for the elements in array :
+Algorithm:
+1.start
+2.Inititlizes the varibles
+3.Enter and read size of array from user
+4.print the array of data
+
+#include <stdio.h>
+
+int main()
+{
+    int a[10],i,n;          //Inititlizes the varibles
+    printf("Enter the element numbers:\n"); //Getting size of array from user
+    scanf("%d",&n);                         //print the values
+    printf("Enter the elements:\n");
+    for(i=0;i<n;i++){                      // reding elements from user
+    scanf("%d",&a[i]);                    //print the elements
+    }
+    printf("The elements are as below:");   
+    for(i=0;i<n;i++){
+        printf(" %d ",a[i]);               //print the data 
+    }
+
+    return 0;
+}

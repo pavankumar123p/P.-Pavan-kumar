@@ -1,0 +1,21 @@
+Algoriym:
+1.start
+2.initialise the  no of string variables along with string values.
+3. find the size of all striing sizes.
+4.print the size of array size
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    char str[]="WELLDONE";  //initialise the  no of string variables along with string value
+    char str1[50]= {'W','E','L','L','D','O','N','E'};
+    char str2[]={'W','E','L','L','D','O','N','E'};
+    char str4[14]={'W','E','L','L','D','O','N','E'};
+    
+    printf("%ld \n",sizeof(str)); //print the size of array size
+    printf("%ld \n",sizeof(str1));//print the size of array size
+    printf("%ld\n",sizeof(str2));//print the size of array size
+    printf("%ld\n",sizeof(str4));//print the size of array size
+    return 0;
+}

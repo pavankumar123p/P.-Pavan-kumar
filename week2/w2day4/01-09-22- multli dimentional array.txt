@@ -1,0 +1,36 @@
+multi dimentional arrays:
+
+Algorithm:
+1.start
+2.declare the size of array and other variables
+3.Enter and read the values for variables
+4.Enter and read the array elements
+5.print the mutli dimentional array
+
+
+#include <stdio.h>
+
+int main(){
+    int a[4][4][4],i,j,k,m,n,p,sum=0; //declare the size of array and other variables
+    printf("Enter th values for m n p:\n"); //Enter and read the values for variables
+    scanf("%d%d%d",&n,&m,&p);
+    printf("enetr the elements:\n "); //nter and read the array elements
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            for(k=0;k<p;k++){
+            scanf("%d", &a[i][j][k]); //print the mutli dimentional array
+            }
+        }
+    }
+    printf("The array elements:\n");
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            for(k=0;k<p;k++){
+                printf(" %d ",a[i][j][k]);
+            }
+            printf("\n");
+        }
+         printf("\n");
+    }
+    return 0;
+}

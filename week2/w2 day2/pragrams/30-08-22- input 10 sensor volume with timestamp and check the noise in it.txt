@@ -1,0 +1,19 @@
+input 10 sensor volume with timestamp and check the noise in it:
+Algorithm:
+1.start
+2.declare the variable
+3.Enter and Read the time stamp samples
+4.check the condition  
+5.print the timestamps incremented by loop
+#include<stdio.h>
+int main(){
+    int num; //declare the variable
+    for(int i=1;i<=10;i++){
+        printf("\n enter the sample: ",i); //Enter and Read the time stamp samples
+        scanf("%x",&num);
+        if(num >=0x05 && num >=0xF1) //Check the condition
+        printf("\t %d output= %x", i,num); //print the timestamps incremented by loop
+        else
+        printf("it's noise");//if condion fails it prints the noise
+    }
+}

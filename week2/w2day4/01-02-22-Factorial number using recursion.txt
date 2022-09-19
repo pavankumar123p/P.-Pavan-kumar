@@ -1,0 +1,19 @@
+Factorial number by recursion:
+Algorithm:
+1.start
+2.declare and initialise  variables as global
+3.check the condion
+4. return the factorial number by recursion 
+5. print the factorial value
+
+#include <stdio.h>
+int fact(int n){  //declare and initialise  variables as global
+    if(n==0||n==1) //Check the condition
+    return 1;
+    else{
+        return n*fact(n-1);//return the factorial number by recursion
+    }
+}
+int main(){
+    printf("%d",fact(5));//print the factorial 
+}

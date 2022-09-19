@@ -1,0 +1,16 @@
+Algorithm:
+1.start
+2.declare and initialise the variables
+3.check the condition and sum the all numbers
+4.print sum the number
+
+#include<stdio.h>
+int main(){
+    int n=4386,r,sum=0;  //declare and initialise the variables
+    while(n>0){ //check the condition
+        r=n%10;
+        sum=sum+r;// sum the all numbers
+         n=n/10;
+    }
+    printf("%d",sum);//print sum the number
+}

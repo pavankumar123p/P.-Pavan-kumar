@@ -1,0 +1,46 @@
+/* function with return and with parameters*/
+
+Algorithm:
+1.start
+2.declare the different datatype variables
+3.Enter and Read the integer values from user
+4.declare calling the different function names
+5.initialises the values as a parameters
+6.print the different calling function result
+
+#include <stdio.h>
+int sum(int x,int y);
+int sub(int x,int y);   // arthematic opertions by call functions
+int mul(int x,int y);
+float Div(float a,float b);
+
+int x,y,sum_res,sub_res,mul_res; //declare the different datatype variables
+float a,b,Div_res;
+void main(){
+    printf("Enter the values of x, y:"); // Read the integer values from user
+    scanf("%d%d",&x,&y);                 // write the ingteger values
+    
+    printf("Enter th values of a, b:");   //Read the float values from user
+    scanf("%f %f",&a,&b);               // write the float values
+    
+   sum_res= sum(x,y);
+   printf("\nsum ==%d",sum_res);
+    sub_res=sub(x,y);                //print the different calling function result
+    printf("\n sub ==%d",sub_res);
+    mul_res=mul(x,y);
+    printf("\n mul ==%d",mul_res);
+    Div_res=Div(a,b); 
+    printf("\n Div ==%f",Div_res);
+}
+int sum(int x, int y){ // initialises the values as a parameters
+  return x+y;
+}
+int sub(int x, int y){ // initialises the values as a parameters
+    return x-y;
+}
+int mul(int x,int y){// initialises the values as a parameters
+    return x*y;
+}
+float Div(float a, float b){// initialises the values as a parameters
+   return a/b;
+}

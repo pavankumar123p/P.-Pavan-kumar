@@ -1,0 +1,24 @@
+factorial number by using  do while loop:
+
+Algorithm:
+1.start
+2.declare and initialise the variable as long double and fact
+3.Enter the number and Read the value
+4.find the factorial number and print the factorial number
+
+#include<stdio.h>
+int main(){
+    long double n,fact=1; //declare and initialise the variables 
+    printf("Enter the number:"); //Enter the numbers
+    scanf("%Lf",&n);  //Read the number
+    do{
+         fact=fact*n; //find the factorial number 
+         n--;
+    }
+    
+    while(n>=1);                      //check the condition
+      printf("the factorial number is:%Lf\n",fact); //print the factorial number
+        
+    
+    
+}

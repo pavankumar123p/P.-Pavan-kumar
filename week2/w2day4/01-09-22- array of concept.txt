@@ -1,0 +1,23 @@
+ array of concept :
+Algorithm:
+1.start
+2.declare and initialise tha arrays
+3.by using loops to count the size of an array
+4. print the size of an array
+
+#include <stdio.h>
+
+int main(){
+ int a[]={1,2,3,4,5,6,7,8,9};    //declare and initialise tha arrays
+  char b[]={'A','B','C','D','E','F','G'};
+  for(int i=0;i<8;i++){               //using loops to count the size of an array
+      printf("\n Charecters: %c",b[i]);
+  }
+      for( int i=0;i<9;i++){         //using loops to count the size of an array
+          printf("\n Integers are:%d",a[i]);
+      }
+      printf("\n a[3]== %d",a[3]);
+      printf("\nthe corresponding value: %d",a[5]); //print the size of an array
+      
+      return 0;
+}

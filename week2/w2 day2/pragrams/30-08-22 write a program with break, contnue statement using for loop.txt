@@ -1,0 +1,22 @@
+write a program with break, contnue statement using for loop:
+
+Algorithm:
+1.start
+2.declare and iniatialise the values
+3.use continue and break statement
+4.print the result by break,continue statements
+
+#include <stdio.h>
+
+int main()
+{
+    int n=20;  //declare and iniatialise the values
+    for(int i=0;i<=n;i++){
+        if(i==6)  //check condition
+        continue;  //continue statement
+        if(i==15)
+        break;  //break statement
+        printf(" %d ",i);
+    }
+   
+}

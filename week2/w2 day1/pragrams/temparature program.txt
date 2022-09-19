@@ -1,0 +1,38 @@
+4.temparature program
+
+Algorithm:
+
+1.start
+2.declare the integer as  a variable
+3.Enter temparature as integer value
+4.Read the temparature
+5. check the condition wether given number is high or low
+6. print the temparature value
+
+
+#include<stdio.h>
+
+int main(){
+    int temp;               //declare the integer as  a variable
+    printf("enter the temparature\n:");  //Enter temparature as integer value
+    scanf("%d",&temp);    //Read the temparature
+    if(temp<0){                //check the condion according to given value
+        printf("Freezing weather\n");  //print the result
+    }
+    else if((temp>0) && (temp<10)){  //check the condion according to given value
+        printf("very cold weather\n"); //print the result
+    }
+    else if((temp>10) && (temp<20)){  //check the condion according to given value
+        printf("cold weather\n");    //print the result
+    }
+    else if((temp>20) && (temp<30)){   //check the condion according to given value
+        printf("normal weather\n");   //print the result
+    }
+    else if((temp>30) &&(temp<40)){  //check the condion according to given value
+        printf("hot weather");    //print the result
+    }
+    else if((temp>40)){      //check the condion according to given value
+        printf("very hot");    //print the result
+    }
+    
+}

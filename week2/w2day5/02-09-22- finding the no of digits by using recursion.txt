@@ -1,0 +1,31 @@
+/*  finding the no of digits by using recursion*/
+
+Alhorithm:
+
+1.start.
+2.declarating the function and initializes the global variable as ctr.
+3.In main function, declares the integer variables.
+4.get the values from user as number and write it .
+5.By recursion, the values in number exctracted one by one.
+6.count the exctracted values by function call.
+7.print the count the no of digits in number by recursion.
+
+
+
+#include <stdio.h>
+int no_of_digits(int num);     // declaration function
+int ctr=0;                     // declaration ctr globally
+int main(){
+    int num, ctr;               // declaration of integer variabls
+    printf("Enter a number:\n");   // get the values from user 
+    scanf("%d",&num);
+    ctr=no_of_digits(num);             //function call
+    printf("number of digits is ==%d",ctr);    // print the output
+}
+int no_of_digits(int num){        //defining the function
+    if(num!=0){
+        ctr++;                 // Icrementing ctr
+        no_of_digits(num/10);   // aclling the function recursively divide by the 10
+    }
+    return ctr;
+}

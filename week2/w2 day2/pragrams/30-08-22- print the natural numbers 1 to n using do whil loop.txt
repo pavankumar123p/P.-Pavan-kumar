@@ -1,0 +1,18 @@
+print the natural numbers 1 to n using do whil loop:
+
+Algorithm:
+1.start
+2.declare the variable
+3.Enetr the number and read it
+4.print the natural numbers 1 to n  
+#include<stdio.h>
+int main(){
+    int n; //declare the variable
+    printf("Enter the number:"); //Enter the number and read it
+    scanf("%d",&n);
+    do{
+        printf("%d\n",n);// print the natural number
+        n--;
+    }
+    while(n>0); //check number
+}

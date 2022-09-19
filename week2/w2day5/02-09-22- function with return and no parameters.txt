@@ -1,0 +1,21 @@
+/* function with return and no parameters*/
+Algorithm:
+1.start
+2.declare the function as global
+3.declare the variables
+4.Enter and Read the two numbers
+5.return and print the sum values
+ 
+#include <stdio.h>
+int add(); //declare the function as global
+int main(){
+    int sum; //declare the variable
+    sum=add(); //call function
+    printf("sum== %d",sum); //print the sum value
+}
+int add(){
+    int a,b;       //declare the variables
+    printf("Enter the two numbers:\n"); //Enter the two numbers
+    scanf("%d %d",&a,&b); //Read the numbers
+    return a+b;    //return the sum
+}

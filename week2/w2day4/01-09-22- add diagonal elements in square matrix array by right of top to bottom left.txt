@@ -1,0 +1,38 @@
+add diagonal elements in square matrix array by right of top to bottom left:
+
+Algorithm:
+1.start
+2.Initialises the variables
+3.Read and write the value of row and colomn from user
+4.Enter the array elements from user
+5.By using double for loops read the array elements of square matrix
+6.sum the all  array of diagonal elements
+7.print the sum of all array of diagonal elements
+
+#include <stdio.h>
+int main(){
+   int a[10][10],m,n,i,j,sum=0; //Initialises the variables
+   
+   printf("\n Enter the row and colomn: ");  //Read the value of row and colomn from user
+   scanf("%d%d",&m,&n);                      //write the value of rows and coloumn
+   
+   printf("\n enter the array elements : "); // get the array elements from user
+   
+   for(i=0;i<m;i++){     //rows
+       for(j=0;j<n;j++){         //coloumn       //By using double for loops read the array elements
+           scanf("%d",&a[i][j]);                    //of square matrix
+       }
+   }
+   for(i=0;i<m;i++){
+       for(j=0;j<n;j++){               // By using double for loops read the array elements
+           printf("%d",a[i][j]);           // of square matrix
+           
+           if(i-j==0 ||i-j==1){           // check the condition for sum of diagonal elements
+           
+               sum=sum+a[i][j];          // sum the all  array of diagonal elements
+           }
+       }
+   }
+   printf("\n sum == %d",sum);      //print the sum of all array of diagonal elements
+    return 0;
+}

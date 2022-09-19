@@ -1,0 +1,22 @@
+2.write program for even or odd number
+
+Algoritm:
+1.start
+2.decalre the integer as a varible
+3.Enter the number and read it
+4.check the condition, wether given number is even or odd
+5.print the result of the number.
+
+
+#include<stdio.h>
+int main(){
+    int a;        //decalre the integer as a varible
+    printf("enter the number:"); //Enter the number and read it
+    scanf("%d",&a);
+    if(a%2==0){                 //check the condition for even or odd
+        printf("the number is even");  //print result
+    }
+    else{
+        printf("the number is odd"); //if condition fails print else part
+    }
+}

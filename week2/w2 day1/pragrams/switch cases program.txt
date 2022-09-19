@@ -1,0 +1,41 @@
+
+5.switch case
+
+Algorithm:
+1.start
+2.declare the float and charecter values
+3.Enter the numbers and read the value
+4.Enter the operator for calculator operations
+5. enter swicth number for selected operation
+6.print the switc result
+
+#include <stdio.h>
+
+int main(){
+    float n1,n2;
+    char operator;
+    printf("Enter the numbers:\n");
+    scanf("%f%f",&n1,&n2);
+    printf("Enter the operator\n");
+    scanf("%c",&operator);
+    switch(operator){
+        case '+':
+        printf("sum is:%f",n1+n2);
+        break;
+        case '-':
+        printf("subtractio is:%f",n1-n2);
+        break;
+        case '*':
+        printf("Mul is:%f",n1*n2);
+        break;
+        case '/':
+        printf("Div is:%f",n1/n2);
+        break;
+        case '%':
+        printf("Mod is:%f",(int)n1%(int)n2);
+        break;
+        default:
+        printf("Invalid numbers");
+    }
+}
+

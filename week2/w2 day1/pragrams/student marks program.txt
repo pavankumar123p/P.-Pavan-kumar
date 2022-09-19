@@ -1,0 +1,37 @@
+
+3.student marks program
+
+Algoritm:
+1.start
+2.declare the variable as a integer
+3.Enter the marks of student and write it
+4.check the condition according to the given value
+5. print the result by else if condition
+
+
+include<stdio.h>
+
+int main(){
+    int a;    //declare the variable as a integer
+    printf("enter the number of marks:");  //Enter the marks of student
+    scanf("%d",&a);              //Read marks of the student
+
+    if((a>=75) && (a<=100)){  //check the condition according to the given value
+        printf("Distinction");  //print the result
+    }
+    else if((a>65) && (a<75)){check the condition according to the given value
+        printf("First class");    ////print the result
+    }
+    else if((a>50) && (a<65)){check the condition according to the given value
+        printf("second class");  ////print the result
+    }
+    else if((a>40) && (a<50)){check the condition according to the given value
+        printf("Third class");   //print the result
+
+    }else if((a>35) && (a<40)){check the condition according to the given value
+        printf("pass");    //print the result
+    }
+    else{
+        printf("Fail"); //if condition fails print else part
+    }
+}

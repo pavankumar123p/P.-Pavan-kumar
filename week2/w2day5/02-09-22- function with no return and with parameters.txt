@@ -1,0 +1,44 @@
+/* function with no return and with parameters*/
+
+Algorithm:
+
+1.declare the variables integers and float values as global variables.
+2.Read and write the integer values from user.
+3.Read and write the float values from user.
+4.perfom the airthematic operations by corresponding values usinig functions. 
+
+#include <stdio.h>
+void sum(int x,int y);
+void sub(int x,int y);   // arthematic opertions by call functions
+void mul(int x,int y);
+void Div(int x,int y);
+int x,y;
+float a,b;
+void main(){
+    printf("Enter the values of x, y:"); // Read the integer values from user
+    scanf("%d%d",&x,&y);                 // write the ingteger values
+    
+    printf("Enter th values of a, b:");   //Read the float values from user
+    scanf("%f %f",&a,&b);               // write the float values
+    
+    sum(x,y);
+    sub(x,y);    //declare calling the function names
+    mul(x,y);
+    Div(a,b); 
+}
+void sum(int x, int y){ // initialises the values as a parameters
+  int sum=x+y;
+  printf("sum=%d\n",sum); // sum the values
+}
+void sub(int x, int y){ // initialises the values as a parameters
+    int sub=x-y;
+    printf("sub=%d\n",sub);// subtract  the values
+}
+void mul(int x,int y){// initialises the values as a parameters
+    int mul=x*y;
+    printf("mul=%d\n",mul);// multiply the values
+}
+void Div(int a, int b){// initialises the values as a parameters
+   float Div=a/b;
+    printf("sub=%f\n",Div);// divid the values
+}

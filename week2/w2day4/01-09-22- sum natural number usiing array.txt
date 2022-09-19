@@ -1,0 +1,23 @@
+sum natural number usiing array:
+
+Algorithm:
+
+1.start
+2.declare and initialise the variables
+3.By count the all array elements and sum the all
+4.print the sum of all natural elements
+ 
+#include <stdio.h>
+
+int main()
+{
+    int a[10]={0,1,2,3,4,5,6,7,8,9}; //declare and initialise the variables
+    int n=sizeof(a)/sizeof(a[0]),i,sum=0;
+    
+    for(i=0;i<n;i++){
+        sum=sum+a[i]; //y count the all array elements and sum the all
+        printf("The array elemets are: %d\n ",sum);  //print the sum of all natural elements
+ 
+    }
+    return 0;
+}

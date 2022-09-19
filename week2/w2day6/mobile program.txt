@@ -1,0 +1,145 @@
+
+#include <stdio.h>
+int fun_mobile(void);
+void message_fun(void);
+void phone_fun(void);
+void cemera_fun(void);
+void music_fun(void);
+int main(){
+    fun_mobile();
+
+}
+//working functiuos for mobile phone
+
+int fun_mobile(void){
+    int function;
+    printf("\n Eneter the number: \n1)Message function \n2)calculator function \n3)Camera function \n4)music function \n9)exit from program\t ");               //user input
+   scanf("%d",&function); 
+   
+   switch(function){
+       case 1:message_fun();
+       break;
+       case 2:phone_fun();
+       break;
+       case 3:cemera_fun();
+       break;
+       case 4:music_fun();
+       break;
+       case 9:return 0;
+       break;
+       default :printf("Invalid value");
+   }
+}
+
+//message function features
+
+void message_fun(void){
+int num,flag=1;
+while (flag){
+    printf("\n enetr the number : \n 1)Enter the mobile number \n2)type the message \n3)sending the message \n4)message sent \n5)deleate the message \n9)back from messsage \t");
+    scanf("%d",&num);
+    switch(num){
+        case 1: printf("\n enter the message");
+        break;
+       case 2: printf("\n type the message");
+       break;
+       case 3: printf("\n sensding the message");
+       break;
+       case 4: printf("\n message sent");
+       break;
+       case 5: printf("\n deleate message");
+       break;
+       case 9: flag=0;
+       break;
+       default:printf("undefined value");
+   }
+    }
+    fun_mobile();
+}
+    void phone_fun(void)
+{
+  int num,flag = 1;
+     while(flag)
+     {
+         
+     printf("\nenter the number and call : \n1)press 1 for language \n2)press selected languge \n3)order for product 4)help line for issues\n5)feedback \n9)main menu\t");
+     scanf("%d",&num);
+     switch(num)
+     {
+         case 1: printf("\n  press 1 for language ");
+         break;
+         case 2: printf("\n press selected languge");
+         break;
+         case 3: printf("\n order for product ");
+         break;
+         case 4: printf("\n help line for issues ");
+         break;
+         case 5: printf("\n feedback  ");
+         break;
+         case 9: flag =0;
+         break;
+         default:printf("Invalid value");
+     }
+     }
+      fun_mobile();
+}
+
+
+// working of cemera_fun 
+
+void camera_fun(void)
+{
+    int num,flag = 1;
+    //gps_fun();
+     while(flag)
+     {
+         
+     printf("\nenter the number : \n1)take picture \n2)record video \n3)list 10 image \n4)delaete the storage  \n9)main menu\t");
+     scanf("%d",&num);
+     switch(num)
+     {
+         case 1: printf("\n take picture   ");
+         break;
+         case 2: printf("\n record video");
+         break;
+         case 3: printf("\n list 10 images ");
+         break;
+         case 4: printf("\n delaete storage ");
+         break;
+         case 9: flag =0;
+         break;
+         default:printf("Invalid value");
+     }
+     }
+}
+     //music functions  
+void music_fn(void)
+{   
+     int num,flag = 1;
+     while(flag)                        //for continious working 
+     {
+    
+     printf("\nenter the number : \n1)start \n2)pause \n3)stop \n4)current_playing \n5)no_of_song  \n 9)main menu\t  ");               //user input
+     scanf("%d",&num);
+    
+    
+    switch(num)                                  //check the value of user input
+   {
+       case 1: printf("\n Playing the song");
+       break;
+       case 2: printf("\n pausing the song");
+       break;
+       case 3: printf("\n stoping the song"); 
+       break;
+       case 4: printf("\n current playing song is");
+       break;
+       case 5: printf("\n no.of songs in the playlist is");
+       break;
+       case 9: flag=0;
+       break;
+       default:printf("Invalid value");
+   }
+}
+      func_mobile();
+    
+}

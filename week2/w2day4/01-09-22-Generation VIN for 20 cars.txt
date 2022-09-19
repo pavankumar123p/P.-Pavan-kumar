@@ -1,0 +1,46 @@
+Generation VIN for 20 cars:
+Algorithm:
+1.start
+2.initialises the variables and id values
+3.Read and print the input value
+4.Read the number of cars by input   
+5.print the 20 cars serial numbers by for loop 
+
+#include <stdio.h>
+
+int main(){
+  int EC=1,HY=2,PU=3;                     // initialises the variables and id values
+  int NO=109186,n,id;
+
+  printf("EC=1 HY=2 PU=3 Enter the plant id:");   //Read the  user input
+  scanf("%d",&id);                               //print the input value
+  
+  if(id==1){                                    //select id by if condition
+  
+       printf("Enter the no of cars:");         //Read the number of cars by input   
+       scanf("%d",&n);                       
+
+  for(int i=0;i<n;i++){                          //print the 20 cars serial numbers by for loop 
+      printf("\n 1ECBH41JXMN %d",NO+i);             
+  }
+  }
+  else  if(id==2){                               // select another else if condition
+       printf("Enter the no of cars:");            //Read the number of cars by input
+       scanf("%d",&n);
+
+  for(int i=0;i<n;i++){
+      printf("\n 1HYBH41JXMN %d",NO+i);            //print the 20 cars serial numbers by for loop
+  }
+  }
+  else  if(id==3){
+       printf("Enter the no of cars:");               // select another else if condition
+       scanf("%d",&n);                                 //Read the number of cars by input
+
+  for(int i=0;i<n;i++){
+      printf("\n 1PUBH41JXMN %d",NO+i);                  //print the 20 cars serial numbers by for loop
+  }
+  }
+  else{
+      printf("Enter the valid id:");                       //if all above condion fails it ges to else part
+  }
+}

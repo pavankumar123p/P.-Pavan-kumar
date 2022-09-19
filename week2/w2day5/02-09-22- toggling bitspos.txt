@@ -1,0 +1,30 @@
+/* toggling bitspos*/
+
+Algorithm:
+1.start
+2.declare the function as global
+3.Enter and Read the values
+4.Check the condition Binary value of toggling
+5.print the toggle bit by call function
+
+#include <stdio.h>
+void fset(int value,int bitpos); //declare the function as global
+int main(){
+    int value,bitpos;      //declare variables
+    printf("Enter inputs:"); //Enter the values 
+    scanf("%d%d",&value,&bitpos); //Read the values
+    fset(value,bitpos); //call function
+} 
+void fset(int value,int bitpos){ //declare the variable
+    int num;  //declare the variable
+    num=value^(1<<bitpos); //toggle bit
+        printf("binary value after toggling\n"); //Binary value of toggling
+        for(int i=7;i>=0;i--){
+            if(num &(1<<i)){
+                printf("1"); //print the toggle bit
+            }
+            else
+            printf("0");
+        }
+    
+}

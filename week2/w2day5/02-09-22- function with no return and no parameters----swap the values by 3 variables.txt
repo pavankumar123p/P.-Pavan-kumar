@@ -1,0 +1,22 @@
+/* function with no return and no parameters----swap the values by 3 variables  */
+
+Algorithm:
+1.start
+2.declares the function
+3.initialises the values to a variables
+4.swap the values by three variables
+5.sum the values by call function
+
+#include <stdio.h>
+void swap(); // declares the function
+void main(){
+    swap(); //call function
+  
+}
+void swap(){
+  int a=5,b=6,c=0; // initialises the values to a variables
+  c=a;
+  a=b;  // swap the values by three variables
+  b=c;
+  printf("swaped vaue is: c= %d\n",c); // sum the values
+}

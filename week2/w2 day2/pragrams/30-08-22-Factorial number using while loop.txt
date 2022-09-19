@@ -1,0 +1,18 @@
+Factorial number using while loop
+Algorithm:
+1.start
+2.declare and initialise variables
+3.Enter the numbers and read it
+4.print the factorial number by using loop
+
+#include<stdio.h>
+int main(){
+    int n,fact=1; //declare and initialise variables
+    printf("Enter the number:"); //Enter the numbers and read it
+    scanf("%d",&n);
+    while(n>=1){   //check condition
+        fact=fact*n; //factorial number
+        n--;
+    }
+    printf("the factorial number is:%d\n",fact); //print the factorial number
+}
