@@ -1,0 +1,44 @@
+/*
+Algorithm:
+1.start
+2.declare and Initialise with enum number
+3.declare the structure and unions student variables
+4.Initialise the student details with structure and unions
+5.print the student details by using structure and unions
+6.print the size of structure and union variables
+*/
+#include<stdio.h>
+enum student_class{first=1,second=2,third=3,fourth=4,fifth=5}; // declare and Initialise with enum number 
+struct student_s1{
+    int id_s1;
+    char name_s1;   //declare the structure student variables
+    int std_s1;
+}stu_s1;
+
+union student_u1{
+    int id_u1;
+    char name_u1;  //declare the union student variables  
+    int std_u1;
+}stu_u1;
+    int main(){
+        
+        stu_s1.id_s1=12;
+        stu_s1.name_s1='p'; //Initialise the student details with structure
+        stu_s1.std_s1=fifth;
+        
+        stu_u1.id_u1=23;
+        stu_u1.name_u1='k'; //Initialise the student details with union
+        stu_u1.std_u1=fourth;
+        
+        printf(".......structure output.....\n");
+        printf("\nstudent id=%d",stu_s1.id_s1);  //print the student details by using structure
+        printf("\nstudent name=%c",stu_s1.name_s1);
+        printf("\nstudent std=%d",stu_s1.std_s1);
+        printf("\nthe sizeof the structure is:%ld\n",sizeof(stu_s1));  //print the size of structure
+        
+        printf("\n........union output......\n");
+        printf("\nstudent id=%d",stu_u1.id_u1);
+        printf("\nstudent name=%c",stu_u1.name_u1);  //print the student details by using union
+        printf("\nstudent std=%d",stu_u1.std_u1);
+        printf("\nthe sizeof union is :%ld",sizeof(stu_u1)); ////print the size of structure
+    }

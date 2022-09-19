@@ -1,0 +1,28 @@
+/*
+ Algorithm:
+1.start
+2.declare the structure with variables
+3.declaration of function prototype
+4.declaring structure variable and read it
+5.
+ */
+#include <stdio.h>
+#include <string.h>
+
+struct student{
+    int age;
+    char name[6];
+};
+void details(struct student record);  //declaration of function prototype
+int main(){
+    struct student record; //declaring structure variable
+    record.age=14;
+    strcpy(record.name,"pavan");
+    details(record);  //call function
+    return 0;
+}
+void details(struct student record){  //defining the function
+
+    printf("Age is :%d\n",record.age); //print the age value
+    printf("name is :%s",record.name); //print the name value
+}

@@ -1,0 +1,21 @@
+/*Algorithm:
+1.start
+2.declare and initialise the variable
+3.assign the address to the pointers
+4.print the address of pointers
+*/
+#include <stdio.h>
+
+int main()
+{
+  int a=20;
+  float b=30.5; //declare and initialise the variable
+  char ch='b';
+  void *p;
+  p=&a;
+  printf("address 'a'= %p  \nvalue of 'a' is :%d\n",p,*(int*)p); //print the address of pointers
+  p=&b;
+  printf("address 'b'= %p  \nthe value of 'b' is:%f\n",p,*(float*)p); //print the address of pointers
+  p=&ch;
+  printf("address 'ch'= %p  \nthe value of 'ch' is:%c\n",p,*(char*)p);  //print the address of pointers
+}

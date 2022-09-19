@@ -1,0 +1,25 @@
+/*
+Algorithm:
+1.start
+2.declare the setbit function with variables
+3.check the condition is value or with 1 bit left shift with position
+4.In main function,declare the two variables
+5.Enter and Read the value and position
+6.print the set bit value by return value
+*/
+#include <stdio.h>
+int setbit(int val,int pos){ //declare the setbit function with variables
+    val=val|(1<<pos); //check the condition is value or with 1 bit left shift with position
+    return val; //return value
+}
+
+int main()
+{
+    int val; //declare the two variables
+    int pos;
+    printf("Enter the value: \n"); //enter the value
+    scanf("%d",&val);                //Read the value
+    printf("Enter the position: \n"); //Enter the position
+    scanf("%d",&pos);                //Read the position
+    printf("The setbit is:%d\n",setbit(val,pos));//print the setbit value
+}

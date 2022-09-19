@@ -1,0 +1,38 @@
+/*
+Algorithm:
+1.start
+2.use typedef function name and declare the varibles
+3.declare s1,s2 structure varibles
+4.Enter and read the age,name,fees details of students
+5.print the age,name,fees of student s1
+*/
+
+#include <stdio.h>
+typedef struct student{ //use typedef function name
+    int age;
+    char name[20];  //declare the varibles
+    float fees;
+    
+}var;
+
+int main(){
+   
+ var s1;     //declare s1 structure varibles
+    
+    printf("Enter the age s1:");  //Enter the age of student
+    scanf("%d",&s1.age);         //Read the value
+    
+    printf("\nEnter the name s1:");//Enter the age of student
+    scanf("%s",s1.name);             //Read the value
+    
+    printf("\nEnter the fees s1:");//Enter the age of student
+    scanf("%f",&s1.fees);           //Read the value
+    
+    
+    printf("struct student s1 details:\n"); //Enter the s1 student details
+    
+    printf("the age:%d\n",s1.age);  //print the age of student s1
+    printf("the name:%s\n",s1.name);  //print the name of student s1
+    printf("the fees:%f\n",s1.fees);  //print the fees of student s1
+    return 0;
+}

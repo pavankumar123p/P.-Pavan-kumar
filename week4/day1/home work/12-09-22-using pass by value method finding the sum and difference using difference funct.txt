@@ -1,0 +1,49 @@
+
+//using pass by value method finding the sum and difference using difference functions
+
+/*
+1.start
+2.declaring structure
+3.declaring variables with differnet datatypes
+4.declaring structure variable
+5.Enter the two numbers and read it.
+6.calling the function using pass by value  
+7.print the sum and subtraction of two variables
+
+*/
+#include <stdio.h>
+struct numbers{    //declaring structure
+
+    int num1;     //declaring variables with differnet datatypes
+    float num2;
+    float add,sub;
+    
+};
+    struct numbers add(struct numbers a);  //functiontion prototype 
+    struct numbers sub(struct numbers a);   //functiontion prototype
+    int main(){
+
+    struct numbers n;       //declaring structure variable
+    printf("enter two numbers");  //Enter the two numbers 
+
+    scanf("%d %f",&n.num1,&n.num2);   //reading  inputs
+    n=add(n);          //calling the function using pass by value   
+   n=sub(n);        //calling the function using pass by value 
+    printf("\nsum of two numbers = %f",n.add);       //print the sum of two variables
+    printf("\n subtraction of two numbers = %f",n.sub);   //print the subtraction of two variables
+    return 0;
+    
+} 
+struct numbers add(struct numbers a)     //defining function
+{
+    a.add=a.num1+a.num2;   //the sum of num1 and num2
+    return a;
+    
+}
+struct numbers sub(struct numbers a)    //defining function
+{
+    a.sub=a.num1-a.num2;   // subtraction of two numbers
+    return a;
+    
+    
+}

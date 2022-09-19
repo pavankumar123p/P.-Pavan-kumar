@@ -1,0 +1,31 @@
+/*Algorithm:
+
+1.start
+2.declare variable
+3.declare pointer
+4.assign the pointer to the variables
+5.call the function to pass multiple values
+6.Airthematic operation by pointers and print the result values
+*/
+ 
+#include <stdio.h>
+void result(int*,int*,int*,int*);
+int main(){
+   int a,b,c,d;  //declare the variables
+   printf("Enter the numbers:"); //Enter the values
+   scanf("%d%d",&a,&b);//Read the values
+   int *p=&a;   //assign the pointer to the variables
+   int *q=&b;  //assign the pointer to the variable
+   int *m=&c;  //assign the pointer to the variable
+   int *n=&d;   //assign the pointer to the variable
+   
+   result(&a,&b,&c,&d); //function call by pass multiple values
+  
+}
+void result(int *x,int *y,int *z,int *r){ //declare the variables as intx,int y
+*z=*x%*y; //Airthematic operation by pointers
+*r=*x+*y; //Airthematic operation by pointers
+
+  printf("the result value is:%d %d \n%d \n%d",*x,*y,*z,*r); //print the values
+ 
+}

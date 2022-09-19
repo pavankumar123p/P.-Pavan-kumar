@@ -1,0 +1,31 @@
+/*
+ Algorithm:
+ 1.start
+ 2.Declare the variable
+ 3.create document  and copy address and write file function
+ 4.check the condition for weather file location correct or not.
+ 5.print the result in document data.
+ */
+#include  <stdio.h>
+#include <stdlib.h>
+int main(){
+	setbuf(stdout,NULL);
+
+	char ch; //Declare the variable
+	FILE *fp=fopen("C:\\Users\\pp69919\\Desktop\\document.txt","r");    //create document  and copy address and write file function
+	if(fp==NULL)           //check the condition for weather file location correct or not
+	{
+	printf("visible error detected. File is not found... !"); //if it shows null, print the file not found
+	exit(1); //exit without any error
+}
+	ch=fgetc(fp);
+while(ch != EOF){
+	if(ch=='*'){
+	break;
+	}
+	 printf("%c",ch); //print the result in document data.
+	ch=fgetc(fp);
+
+}
+fclose(fp); //close the function
+}

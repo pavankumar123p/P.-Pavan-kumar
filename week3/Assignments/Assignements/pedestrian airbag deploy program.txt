@@ -1,0 +1,115 @@
+#include <stdio.h>
+#include <stdio.h>
+int i=0,center_index=0;left_index=0;right_index,x=0,val=0;size;
+void merge_data(int *,int *,int *,char *);
+int airbag_deploy(char *,int);
+
+int main(){
+	char f_p_data[20]; //decalring array for storing valid data
+
+	int pr[50]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50};
+    int pc[50]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50};
+    int pl[50]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50}; //declare and assign the PR,PC,PL sensor values as variables
+
+    //declare and initializing the 3 different sensor values upto 50 with 3 different arrays
+
+    printf("Enter the pressure sensors right , centre ,left :\n\n");  
+
+     printf("PR Time stamp\t\tPR Data\t\tPC Time stamp\t\tPC Data\t PL Time stamp\t\tPLData\n");
+    for(i=5;i<50;i++){
+    	printf("\t%d\t\t0x%x\t\t\t%d\t\t0x%x\t\t%d\t\t0x%x\n",i,pr[i],i,pc[i],i,pl[i]);
+    } //print the 150 sensor values by 3 sensors at each 50 values
+
+    merge_data(&pr,&pc,&pl,&f_p_data);  //calling merge data function to collect only the valid data from the 3 sensor
+    size =strlen(f_p_data);
+
+    val=airbag_deploy(&f_p_data,size); //calling function to check the requirement for deploying the airbag asnd assignhing the value to a variable
+    if(val ==5){
+    	printf("\n airbag deployed");
+    }
+    else{
+    	printf("\n not deployed");
+    }
+}
+
+ //function defnition for merging or filtering the data
+ //data filtered out by avoiding data lesss than 0x05 and more than 0xf5
+ //data mmust be sampled in 5 ms
+ //first sample must be right then center left
+ //if the data sampled is faulty then take the next sample coming after 5 ms
+
+void merge_data(int * right,int * center,int * left,char * sensor_data){
+	printf("\n \n");
+	for(i=0;i<50;i=i+5){
+		if(*(right +right_index) >0x05 && *(right+right_index)<0xf5){
+			*(sensor_data+x)=*(right+right_index);
+			printf("\nright\t=%d\t%d\t%x\t%x",right_index,x,*(sensor_data+x),*(right+right_index));
+			x=x+1;
+			i=i+5;
+			center_index=right_index+5;
+			break;}
+		else{
+			right_index=right_index+5;
+			i=i+5;
+			continue;
+		}
+	}
+
+// same thing done for the right sensor is to be implemented for the center sensor
+ // if it got a valid data then increment the left index with center index+5
+
+	while(left_index<50){
+		if(*(center+center_index)>0x05 && *(center+center_index)<0xf5){
+			*(sensor_data+x)=*(center+center_index);
+			printf("\ncenter\t=%d\t%d\t%x\t%x",center_index,x,*(sensor_data+x),*(center+center_index));
+			x=x+1;
+			i=i+5;
+			left_index=center_index+5;
+			break;
+		}
+		else{
+			center_index=center_index+5;
+			i=i+5;
+			continue;
+		}
+	}
+
+	 //same thing done for the right sensor is to be implemented for the left sensor
+	 //if it got a valid data then increment the right index with left index+5
+
+	while(left_index<50){
+		if(*(left+left_index) >0x05 && *(left+left_index) <0xf5){
+			*(sensor_data+x)=*(left+left_index);
+			printf("\nleft\t=%d\t%d\t%x\t%x",left_index,x,*(sensor_data+x),*(left+left_index));
+			x=x+1;
+			right_index=left_index+5;
+			i=i+5;
+			break;
+		}
+		else{
+			left_index=left_index+5;
+			i=i+5;
+			continue;
+		}
+	}
+}
+
+// function for check the requirements for deploying the air bag
+// when it read continuos value that is greater then 0x55 then return specified value and compare it
+ //with the value in main and do the correponding work
+
+int airbag_deploy(char *f_p_data,int size){
+	int count =0;
+	for(int i=0;i<size;i++){
+		if(f_p_data[i]>0x55){
+			count++;
+			if(count==5)
+				break;
+		}
+		else{
+			count =0;
+		}
+		count=0;
+	}
+	return count;
+}

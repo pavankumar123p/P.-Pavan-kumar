@@ -1,0 +1,18 @@
+/*Algorithm:
+1.start
+2.define the pi variable as macro
+3.declare the variables
+4.Enter and read the number for square
+5.print the result by using formula
+*/
+#include <stdio.h>
+#define square(x) (x*x) //define the square variable as macro
+int main(){
+    int x;                 //declare the variable
+    
+    printf("Enter the value of x:"); //Enter and read the number for radius
+    scanf("%d",&x);
+    
+    printf("square of no:%d",square(x)); //print the result
+   
+}

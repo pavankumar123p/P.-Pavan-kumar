@@ -1,0 +1,45 @@
+/*
+Agorithm:
+1.start
+2.declare the struct employees variables
+3.Enter and read the employees details by user
+4.print the employees details 
+*/
+
+#include <stdio.h>
+struct employee{
+        int my_id;   //declare the struct employee variables
+        char my_name[10];
+        float my_salary;
+    };
+int main(){
+    int n;
+    
+    struct employee details[n]; // details of employee
+         printf("Enter the Employee details:\n \n");
+         
+         printf("Enter the size of array:");
+         scanf("%d",&n);
+         
+         for(int i=0;i<=n;i++){
+             
+         
+         printf("Enter the Employee id: \n");  //Enter the Employee id
+         scanf("%d",&details[i].my_id);       //read the Employee id
+         
+         printf("Enter the Employee name: \n");//Enter the Employee Name
+         scanf("%s",details[i].my_name);        //read the Employee Name
+         
+         printf("Enter the employee salary: \n");//Enter the Employee salary
+         scanf("%f",&details[i].my_salary); //read the Employee salary
+         }
+         printf("After the Employee details:\n \n ");
+         
+         for(int i=0;i<=n;i++){
+             
+         printf("the Employee id is:%d\n",details[i].my_id);  //print the Employee id
+         printf("the Employee Name is:%s\n",details[i].my_name); //print the Employee Name
+         printf("the Employee salary is:%f\n",details[i].my_salary); //print the Employee salary
+         }
+    return 0;
+}

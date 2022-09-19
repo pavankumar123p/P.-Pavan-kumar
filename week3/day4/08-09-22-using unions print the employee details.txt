@@ -1,0 +1,35 @@
+/*
+Agorithm:
+1.start
+2.declare the union employee variables
+3.Enter and read the employee details by user
+4.print the employee details 
+*/
+
+#include <stdio.h>
+union employee{
+        int my_id;   //declare the union employee variables
+        char my_name[10];
+        float my_salary;
+    }details;
+int main(){
+    
+         printf("Enter the Employee details:\n \n");
+         
+         printf("Enter the Employee id: ");  //Enter the Employee id
+         scanf("%d",&details.my_id);       //read the Employee id
+         
+         printf("Enter the Employee name: ");//Enter the Employee Name
+         scanf("%s",details.my_name);        //read the Employee Name
+         
+         printf("Enter the employee salary: ");//Enter the Employee salary
+         scanf("%f",&details.my_salary); //read the Employee salary
+         
+         printf("After the Employee details:\n \n ");
+         
+         printf("the Employee id is:%d\n",details.my_id);  //print the Employee id
+         printf("the Employee Name is:%s\n",details.my_name); //print the Employee Name
+         printf("the Employee salary is:%f\n",details.my_salary); //print the Employee salary
+         printf("size of union =%ld bytes",sizeof(details));
+    return 0;
+}

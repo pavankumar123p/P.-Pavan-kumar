@@ -1,0 +1,57 @@
+*******************************************************************************/
+/*
+Algorithm:
+1.start
+2.declare the structure variables as global
+3.declare the variables 
+4.Enter and Read  the 5 values for each member
+5.sum and avarage the all values for each number
+6.check the condition and print the values
+*/
+#include <stdio.h>
+struct acc_sensor{
+    int x;
+    int y; //declare the structure variables as global
+    int z;
+};
+int main()
+{
+int i;                 // declare the variables 
+struct acc_sensor values[5];
+int sum_x=0,sum_y=0,sum_z=0;
+
+
+printf("Enter the 5 values:\n"); // Enter the 5 values
+
+for(i=0;i<5;i++){
+    printf("Enter the values for each member:\n"); //Enter the values for each member
+    scanf("%d",&values[i].x);
+     scanf("%d",&values[i].y); // Read the values for each member
+      scanf("%d",&values[i].z);
+}
+for(i=0;i<5;i++){
+    sum_x =sum_x+values[i].x;
+    sum_y =sum_y+values[i].x; //sum the all values for each number
+    sum_z =sum_z+values[i].x;
+
+}
+
+    sum_x =sum_x/5;
+    sum_y =sum_y/5;  //avarage the all values in each member
+    sum_z =sum_z/5;
+if(sum_x==100 && sum_y==250 && sum_z==300){ //check the condition and print the values
+    printf("Left\n");
+}
+else if(sum_x==300 && sum_y==250 && sum_z==100){  //check the condition and print the values
+    printf("Right\n");
+}
+else if(sum_x==100 && sum_y==150 && sum_z==250){ //check the condition and print the values
+    printf("forword\n");
+}
+else if(sum_x==250 && sum_y==800 && sum_z==200){   //check the condition and print the values
+    printf("Backword\n");
+    
+}else{               //check the condition and print the values
+    printf("\nstop");
+}
+}

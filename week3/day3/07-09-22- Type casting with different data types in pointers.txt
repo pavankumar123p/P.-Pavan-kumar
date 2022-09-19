@@ -1,0 +1,27 @@
+/*Algorithm:
+1.start
+2.declare and initialise the variable
+3.assign the address to the pointers
+4.print the address of pointers
+*/
+#include <stdio.h>
+
+int main()
+{
+  int a=5;
+  float b=30.5; //declare and initialise the variable
+  char ch='b';
+  short  d=6;
+  long double e=20.50;
+  void *p;
+  p=&ch;
+  printf("the typecast value of 'a' is :%c\n",*(char*)p); //print the typecast value of pointers
+  p=&a;
+  printf("the typecast value of 'b' is:%d \n",*(int*)p); //print the typecast value of pointers
+  p=&b;
+  printf("the typecast value of 'ch' is:%f\n",*(float*)p);  //print the typecast value of pointers
+  p=&d;
+  printf("the typecast value of 'ch' is:%hi\n",*(float*)p);  //print the typecast value of pointers
+  p=&e;
+  printf("the typecast value of 'ch' is:%Lf\n",*(float*)p);  //print the typecast value of pointers
+}

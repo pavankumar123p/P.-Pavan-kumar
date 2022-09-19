@@ -1,0 +1,23 @@
+/*
+ Algorithm:
+
+1.start
+2.Declare the pointer with variable
+3.open an empty text file in read only mode
+4.it will cause an input and output error trying to write on it.
+5.check the condition and print the result by given input
+ */
+#include <stdio.h>
+int main(){
+	setbuf(stdout,NULL);
+	FILE *fp; //Declare the pointer with variable
+	fp=fopen("C:\\Users\\pp69919\\Desktop\\Document.txt","r"); //open an empty text file in read only mode
+	if(ferror(fp)!=0) //check the condition 
+		printf("error occurred");
+	putc('T',fp);
+	if(ferror(fp)!=0) //check the condition 
+		//fprintf("error occurred");
+	fclose(fp); //close the file
+	return 0;
+
+}

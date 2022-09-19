@@ -1,0 +1,22 @@
+Algorithm:
+
+1.start
+2.declaring variable
+3.declaring pointer
+4.printing value
+5.printning address
+
+
+#include <stdio.h>
+
+int main()
+{
+    int a=10;    //declaring variable
+    int b=5;         //declaring variable
+    char ch='a';   //declaring variable
+    int *p=&a;    //declaring pointer
+    int *q=&b;    //declaring pointer
+    char *m=&ch;  //declaring pointer
+    
+    printf("Gieven values:%d %d %c\nAfter result: %d %d %c",a,b,ch,*p,*q,*m); // Result of all printed values
+}

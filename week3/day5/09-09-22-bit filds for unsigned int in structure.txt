@@ -1,0 +1,18 @@
+/*Algorithm:
+1.start
+2.declare and intialise structure 1 and structure 2 the variables
+3.print the size of structure s1 and structure s2
+*/
+#include <stdio.h>
+struct student{
+    unsigned int high:1; //declare and intialise structure1 the variables
+    unsigned int low:1;
+}s1;
+struct student2{
+    unsigned int high:1;
+    unsigned int low:1;//declare and intialise the structure2 variables
+}s2;
+int main(){
+    printf("size of s1:%lu\n",sizeof(s1));  //print the size of structure s1
+     printf("size of s2:%lu\n",sizeof(s2)); //print the size of structure s2
+}

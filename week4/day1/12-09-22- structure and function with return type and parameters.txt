@@ -1,0 +1,24 @@
+#include <stdio.h>
+typedef struct{
+    int a;
+    float b;
+}student;
+student add(student);
+int main(){
+    student s1,s2;
+    s1.a=10;
+    s1.b=22.5;
+    printf("s1.a=%d",s1.a);
+    printf("    s1.b=%f",s1.b);
+
+    s2=add(s1);
+    printf("\ns1.a=%d",s2.a);
+    printf("    s1.b=%f",s2.b);
+}
+
+student add(student s){
+    s.a=20;
+    s.b=20.6;
+    return s;
+}
+ 

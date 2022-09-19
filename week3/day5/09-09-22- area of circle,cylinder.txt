@@ -1,0 +1,27 @@
+/*Algorithm:
+1.start
+2.define the pi variable as macro
+3.declare the variables
+4.Enter and read the number for radius
+5.print the result by using formula
+*/
+#include <stdio.h>
+#include <math.h>
+#define pi 3.14 //define the pi variable as macro
+int main()
+{
+    int radius, height,circle,cylinder; //declare the variables
+    
+    printf("Enter the number for radius:\n"); //Enter the number for radius
+    scanf("%d",&radius);   // read it
+    
+    printf("Enter the number for height:\n"); //Enter the number for radius
+    scanf("%d",&height); // read it
+    
+    circle=pi*radius*radius; //formula
+    printf("the area of circle is:%d\number",circle); //print the result
+    
+    cylinder=2*pi*radius*height; // formula
+    printf("The area of cylinder is:%d\n",cylinder); ////print the result
+    return 0;
+}

@@ -1,0 +1,21 @@
+/*Algorithm:
+1.start
+2.declare and intialise structure the variables
+3.print the size and value for variables of structure s1
+*/
+#include <stdio.h>
+struct student {
+    unsigned int x:3; //declare and intialise structure the variables
+}s1;
+
+int main(){
+s1.x=4;
+printf("size of s1:%lu\n",sizeof(s1)); //print the size and value for variables of structure s1
+printf("the value is:%u\n",s1.x);
+s1.x=7;
+printf("size of s1:%lu\n",sizeof(s1)); //print the size and value for variables of structure s1
+printf("the value is:%u\n",s1.x);
+s1.x=A;
+printf("size of s1:%lu\n",sizeof(s1)); //print the size and value for variables of structure s1
+printf("the value is:%u\n",s1.x);
+}

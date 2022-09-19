@@ -1,0 +1,33 @@
+/*WAP to pass pointer as a argument to the function */
+
+/*Algorithm:
+
+1.start
+2.declare pointer
+3.declare variable
+4.Enter and Read the array of elememnts
+5.call the function to pass multiple values
+6.Airthematic sum operation by pointers and print the result values
+*/
+ 
+#include <stdio.h>
+float avg(int *arr,int n);  //function prototype
+int main(){
+int arr[5]; //declare array of size and float variables
+float average;
+
+printf("Enter array elememnts:"); //Enter the array of elememnts
+for(int i=0;i<5;i++){
+    scanf("%d",&arr[i]);   //Read the array values
+}
+average=avg(arr,5);              //calling function
+printf("\naverage of array:%f",average);
+return 0;
+}
+float avg(int *arr, int n){
+    int sum=0;          //declare the variable
+    for(int i=0;i<5;i++){
+        sum=sum+arr[i]; //sum the array elememnts
+    }
+    return (sum/5);  //return sum values
+}

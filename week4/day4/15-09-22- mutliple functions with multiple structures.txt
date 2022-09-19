@@ -1,0 +1,90 @@
+/*
+ *
+ Algorithm:
+ 1.start
+ 2.declare the variables and includes the different files with their names
+ 3.Enter and read the numbers
+ 4.do operation on student  and employee functions
+ 5. print the addition and subtraction by return at different files
+ */
+#include <stdio.h>
+#include "student.c"
+#include "employee.c"
+#include "fun_prototype.c"
+struct student { //declare the student structure with student variable names
+	char std_name[10];
+	int std_id;
+};
+struct employee{   //declare the student structure with employee variables
+	char emp_name[10];
+	int emp_id;
+};
+struct sensor{  //declare the student structure with sensor input variables
+	int input1;
+	int input2;
+};
+int main(){
+	struct student s1; //student function prototype
+
+    struct employee s2; //employee function prototype
+
+    struct sensor s3; //sensor function prototype
+
+    printf("Enter student details \n "); //Enter the student details
+    scanf("%d %s",&s1.std_id,&s1.std_name); //Read the student details
+
+    printf("Enter employee details \n");  //Enter the employee details
+    scanf("%d %s",&s2.emp_id,&s2.emp_name);  //Read the employee details
+
+    printf("Enter the inputs to sensor \n");  //Enter the sensor input details
+    scanf("%d %s",&s3.input1,&s3.input2);  //Read the sensor input details
+
+    student_fun(s1); //function call for student function
+
+    employee_fun(s2); //function call for employee function
+
+    sensor_fun(s3);//function call for sensor function
+}
+
+
+
+student.c(file):
+
+
+void student_func(struct student s1){ //function name
+	
+printf("After enters student datails:");
+printf("student name:%c \n",s1.std_name); //student name
+printf("student id:%d \n",s1.std_id); //student id
+}
+
+
+employee.c(file):
+
+
+
+void employee_func(struct employee s2){ //employee function name
+
+printf("After enters employee datails:");
+printf("employee name:%c \n",s2.emp_name); //employee name
+printf("employee id:%d \n",s2.emp_id); //employee id
+}
+
+
+sensor.c(file):
+
+
+void sensor_func(struct sensor s3){ //function name
+printf("After enters sensor datails:");
+printf("sensor name:%c \n",s3.input1); //sensor input 1
+printf("sensor id:%d \n",s3.input2); //sensor input2
+}
+
+
+
+fun_prototype.c(file):
+
+
+void student_func(struct student s1); //function prototype of student
+void employee_func(struct employee s2);  //function prototype of Employee
+void sensor_func(struct sensor s3);  //function prototype of sensor

@@ -1,0 +1,23 @@
+
+void func(int *std_id, char *std_name, float *std_marks);
+int main(){
+	setbuf(stdout,NULL);
+    int std_id;
+    char std_name[15];
+    float std_marks;
+ printf("Enter Student ID:\n");
+ scanf("%d",&std_id);
+ printf("Enter student name:\n");
+ scanf("%s",&std_name);
+ printf("Enter student marks:\n");
+ scanf("%f",&std_marks);
+
+ func(&std_id,&std_name,&std_marks);
+ return 0;
+}
+void func(int *std_id, char *std_name, float *std_marks){
+
+	printf("student id is:%d\n",*std_id);
+	printf("student name is:%s\n",std_name);
+	printf("student percentage is:%f",*std_marks);
+}

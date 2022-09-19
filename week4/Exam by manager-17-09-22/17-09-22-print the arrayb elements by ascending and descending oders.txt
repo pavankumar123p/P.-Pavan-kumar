@@ -1,0 +1,52 @@
+/*
+Algorithm:
+
+1.start
+2.declare the variables and Enter and Read the Array size
+3.Enter the Array Elements and Read, comparingthe two loops
+4.print the ascending order of Array by two loops with swap operation
+5.print the descending order of Array by two loops with swap operation
+*/
+
+#include <stdio.h>             
+#include<conio.h>
+
+
+int main(){                       
+	int a[100],n,i,j;      //declare the variables
+	printf("Array size: "); //Enter the Array size
+        scanf("%d",&n);   //Read the Array size
+        printf("Elements: "); // Enter the Array Elements
+        
+      for(i=0;i<n;i++){    
+        scanf("%d",&a[i]);  // Read the Array Elements by for Loop
+    }
+	for (int i=0;i<n;i++){      //for Loop is count the values  for ascending order
+		for (int j=0;j<n;j++){    //Loop is comparing succussive and ressesive values
+			if (a[j]>a[i]){              //Comparing two array of i,j elements
+				int tmp = a[i]; 
+				a[i] = a[j];            //use swap operation
+				a[j] = tmp;         
+			}  
+		}
+	}
+	printf("\n\nAscending : ");                
+	for (int i=0;i<n;i++){                     // by using this loop print the array of assending order
+		printf("%d",a[i]);
+	}
+	for (int i=0;i<n;i++){                   //for Loop is count the values  for descending order
+		for (int j=0;j<n;j++){             //Loop is comparing succussive and ressesive values
+			if (a[j] < a[i]){                //Comparing two array of i,j elements
+				int tmp = a[i];         
+				a[i] = a[j];            //use swap operation
+				a[j] = tmp;             
+			}
+		}
+	}
+	printf("\n\nDescending : ");                    
+	for (int i = 0; i < n; i++){                     //Loop for printing array data after sorting
+		printf(" %d ", a[i]);                  
+	}
+
+	return 0;          
+}

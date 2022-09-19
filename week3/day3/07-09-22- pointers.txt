@@ -1,0 +1,19 @@
+Algorithm:
+1.start
+2.declare and initialise the variable
+3.assign the address to the pointers
+4.print the address of pointers
+
+#include <stdio.h>
+
+int main()
+{
+  int a=10; //declare and initialise the variable
+  int *p1=&a;
+  int **p2=&p1;  //assign the address to the pointers
+  int ***p3=&p2;
+  printf("the address of pointer p1:%p\n",*p2);
+  printf("the address of pointer:p2 %p\n",*p3); //print the address of pointers
+  printf("the address of pointer:%p\n",p3); 
+    return 0;
+}

@@ -1,0 +1,46 @@
+Arithm.c:(file name)
+-------------------
+
+/*
+ Algorithm:
+ 1.start
+ 2.declare the variables and includes the different files with their names
+ 3.Enter and read the numbers
+ 4.do operation on addition and subtraction
+ 5. print the addition and subtraction by return at different files
+ */
+
+#include <stdio.h>
+#include "process.h"
+#include "process2.h"
+int main(){
+	//stdbuf(stdout,NULL);
+	int n1,n2,sum,res;     //declare the variables
+	printf("Enter the numbers:"); //Enter the numbers
+	scanf("%d%d",&n1,&n2); //Read the numbers
+	sum=add(n1,n2);   //addition
+	res=sub(n1,n2);  //subtraction
+	printf("the sum result is:%d\n",sum); //print the addition
+	printf("the sum result is:%d",res); //print the subtraction
+	return 0;
+}
+
+
+
+process.h:(file name2)
+---------------------
+
+
+
+int add(n1,n2){
+	return (n1+n2); //return the values
+}
+
+
+
+process2.h:(file name3)
+------------=----------
+
+int sub(n1,n2){
+	return (n1-n2); //return the values
+}

@@ -1,0 +1,13 @@
+Algorithm:
+1.start
+2. use rand in-build function print the random number by % number
+
+#include <stdio.h>
+# include <stdlib.h>
+int main()
+{
+  
+        printf("random number is:%d\n",rand()%5); //use rand in-build function print the random number by % number
+       
+    return 0;
+}

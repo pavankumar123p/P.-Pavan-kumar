@@ -1,0 +1,39 @@
+/*
+Algorithm:
+1.start
+2.declare variables for librery_books details
+3.declare the struct variable and pointer variable
+4.enter the books details
+5.print the librery_books details
+*/
+#include <stdio.h>
+struct librery_books{
+    int book_id;
+    char book_name[20];
+    char book_author[30]; //declare variables for librery_books details
+    char subject_name[26];
+};
+int main(){
+    struct librery_books details,*ptr; //declare the struct variable and pointer variable
+    ptr=&details;
+    
+    printf("Enter the librery books details:"); //enter the books details
+    
+    printf("Enter the book id:\n "); //Enter the book id 
+    scanf("%d",&ptr->book_id);      //Read the book id
+    
+    printf("Enter the book name:\n");//Enter the book name
+    scanf("%s",ptr->book_name);         //Read the book 
+    
+    printf("Enter the book author:\n");//Enter the book author
+    scanf("%s",&ptr->book_author);   //Read the book author
+    
+    printf("Enter the subject name:\n");//Enter the book name
+    scanf("%s",ptr->subject_name);  //Read the book name
+     
+    printf("\nEnter the book id:%d",ptr->book_id); //print the book id
+    printf("\nEnter the book name:%s",ptr->book_name);  //print the book name
+   printf("\nEnter the book aurther:%s",ptr->book_author);  //print the book author
+    printf("\nEnter the subject name:%s",ptr->subject_name);  //print the book name
+    
+}

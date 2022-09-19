@@ -1,0 +1,13 @@
+/*Algorithm:
+1.start
+2.declare and initialise the variable
+3.assign the address to the pointers
+4.print the address of pointers
+*/
+#include <stdio.h>
+
+int main()
+{
+ unsigned int *p=NULL; //initialise null to pointer
+ printf("%ls",p);//print the null pointer
+}

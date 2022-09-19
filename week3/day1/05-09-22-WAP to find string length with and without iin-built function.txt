@@ -1,0 +1,22 @@
+Algorithm:
+1.start
+2.initialise the integer value
+3.declare the string variable name
+4.Enter and Read the string value
+5.check the condition by with out, with in-built function
+6.increment value
+7.print the length of string
+
+#include <stdio.h>
+#include <string.h>
+int main(){
+    int i=0;          //initialise the integer value
+    char str[10];     //declare the string variable name
+    printf("Enter the string is:\n");   //Enter the string value 
+    scanf("%s",str);         //Read the string value
+    //while(i<strlen(str)){     //check the condition by in-built function
+    while(str[i]!='\0'){      //check the condition by with out in-built function
+        i++;                //increment value
+    }
+    printf("the length of string is:%d",i); //print the length of string
+}

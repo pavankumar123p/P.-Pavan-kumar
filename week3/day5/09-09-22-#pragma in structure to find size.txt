@@ -1,0 +1,17 @@
+/*Algorithm:
+1.start
+2.declare structure the variables
+3.print the size  for variables of structure s1 by using #pragma
+*/
+#include <stdio.h>
+#pragma pack(1)  //using pragma pack
+struct student {
+    int n;       //declare and intialise structure the variables
+    char ch[10];
+    float f1;
+
+}s1;
+
+int main(){
+printf("the size of s1:%ld ",sizeof(s1)); //print the sises structure  elements
+}
